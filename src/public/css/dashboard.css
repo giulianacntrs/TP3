@@ -1,0 +1,235 @@
+:root {
+  --bg-1: #101014;
+  --panel: rgba(255, 255, 255, 0.04);
+  --accent: #588eaf;
+  --accent-2: #bad3e3;
+  --lav: #bcbefa;
+  --dark-text: #222;
+  --muted: rgba(0, 0, 0, 0.6);
+
+  --bg: #f7f7f7;
+
+  --bg-sidebar: linear-gradient(135deg, #d7d7d7 0%, #95b9d8 35%, #618794 70%, #6d8993 100%);
+  --navbar-bg: linear-gradient(135deg, #d7d7d7 0%, #95b9d8 35%, #618794 70%, #6d8993 100%);
+}
+
+html.dark {
+  --bg: #121212;
+  --text: #e5e5e5;
+  --muted: rgba(233, 238, 246, 0.6);
+  --bg-sidebar: linear-gradient(135deg, #1b1b1b 0%, #2a2f33 30%, #1e2a30 65%, #161a1d 100%);
+  --navbar-bg: linear-gradient(135deg, #1b1b1b 0%, #2a2f33 30%, #1e2a30 65%, #161a1d 100%);
+}
+
+body {
+    background: linear-gradient(135deg, #101014, #1c1f28);
+    min-height: 100vh;
+    color: #e6e6e6;
+    font-family: "Inter", sans-serif;
+}
+
+.glass-card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 24px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.btn-neo {
+    border-radius: 14px;
+    padding: 14px 24px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: 0.2s;
+    border: none;
+}
+
+.btn-neo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+.btn-sueno {
+    background: #6c63ff;
+}
+
+.btn-ejercicio {
+    background: #00c9a7;
+}
+
+.btn-social {
+    background: #ffb74d;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+    border-radius: 12px;
+}
+
+h2, h4, h5 {
+    font-weight: 700;
+}
+
+#listaRegistros li {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+    border-radius: 12px;
+}
+
+/* DASHBOARD */
+.brand-mark img {
+    margin-top: 15px !important;
+    width: 75px !important;
+}
+
+/* LOGIN */
+body.login-body, body.registro-body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(
+        135deg,
+        #d7d7d7 0%,
+        #95b9d8 35%,
+        #618794 70%,
+        #6d8993 100%
+    );
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass-nav {
+    height: 55px;
+    background: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+}
+
+main {
+    padding-top: 70px;
+}
+
+/* -------- SIDEBAR -------- */
+.sidebar {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    background: var(--bg-sidebar);
+    padding: 20px 10px;
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    z-index: 999;
+}
+
+.sidebar.collapsed {
+    transform: translateX(-100%);
+}
+
+/* -------- CONTENIDO -------- */
+#content {
+    margin-left: 240px;
+    transition: margin-left 0.3s ease;
+}
+
+#content.collapsed {
+    margin-left: 0;
+}
+
+/* -------- MENU -------- */
+.sidebar .menu li {
+    list-style: none;
+    margin: 15px 0;
+}
+
+.sidebar .menu a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.sidebar .menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* -------- NAVBAR -------- */
+#navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+
+/* -------- CONTENT -------- */
+.content {
+    margin-left: 240px;
+    margin-top: 56px;
+    transition: margin-left 0.3s;
+}
+
+.collapsed + .content {
+    margin-left: 70px !important;
+}
+
+/* -------- MODO CLARO / OSCURO -------- */
+:root {
+    --bg: #f7f7f7;
+    --text: #222;
+    --bg-sidebar: linear-gradient(
+        135deg,
+        #d7d7d7 0%,
+        #95b9d8 35%,
+        #618794 70%,
+        #6d8993 100%
+    );
+    --navbar-bg: linear-gradient(
+        135deg,
+        #d7d7d7 0%,
+        #95b9d8 35%,
+        #618794 70%,
+        #6d8993 100%
+    );
+}
+
+html.dark {
+    --bg: #121212;
+    --text: #e5e5e5;
+    --bg-sidebar: linear-gradient(
+        135deg,
+        #1b1b1b 0%,
+        #2a2f33 30%,
+        #1e2a30 65%,
+        #161a1d 100%
+    );
+    --navbar-bg: linear-gradient(
+        135deg,
+        #1b1b1b 0%,
+        #2a2f33 30%,
+        #1e2a30 65%,
+        #161a1d 100%
+    );
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+#navbar {
+    background: var(--navbar-bg);
+}
